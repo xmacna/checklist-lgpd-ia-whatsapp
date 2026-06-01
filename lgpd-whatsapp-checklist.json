@@ -1,0 +1,90 @@
+{
+  "$schema": "https://xmacna.ai/schemas/lgpd-whatsapp-checklist.schema.json",
+  "title": "Checklist LGPD para IA no WhatsApp",
+  "brand": "XMACNA",
+  "positioning": "Funcionarios Digitais com IA",
+  "last_reviewed": "2026-06-01",
+  "canonical": "https://xmacna.ai/lgpd-ia-whatsapp",
+  "disclaimer": "Material educativo e operacional. Nao substitui parecer juridico.",
+  "items": [
+    {
+      "id": "LGPD-WA-001",
+      "area": "finalidade",
+      "priority": "P0",
+      "check": "Documentar finalidade, dados coletados, origem e destino antes de publicar o agente."
+    },
+    {
+      "id": "LGPD-WA-002",
+      "area": "base_legal",
+      "priority": "P0",
+      "check": "Registrar base legal por etapa do atendimento, qualificacao, CRM e follow-up."
+    },
+    {
+      "id": "LGPD-WA-003",
+      "area": "transparencia",
+      "priority": "P0",
+      "check": "Informar empresa, finalidade do atendimento e caminho para contato humano quando aplicavel."
+    },
+    {
+      "id": "LGPD-WA-004",
+      "area": "minimizacao",
+      "priority": "P0",
+      "check": "Coletar apenas dados necessarios para a finalidade declarada."
+    },
+    {
+      "id": "LGPD-WA-005",
+      "area": "dados_sensiveis",
+      "priority": "P0",
+      "check": "Criar fluxo especial quando houver risco de dados sensiveis ou de criancas."
+    },
+    {
+      "id": "LGPD-WA-006",
+      "area": "papeis",
+      "priority": "P0",
+      "check": "Definir controlador, operador, fornecedores e contratos ou DPAs aplicaveis."
+    },
+    {
+      "id": "LGPD-WA-007",
+      "area": "direitos",
+      "priority": "P0",
+      "check": "Manter canal para pedidos de titulares e treinar o time para reconhecer solicitacoes no WhatsApp."
+    },
+    {
+      "id": "LGPD-WA-008",
+      "area": "retencao",
+      "priority": "P0",
+      "check": "Definir prazos de retencao e descarte para conversas, leads e clientes."
+    },
+    {
+      "id": "LGPD-WA-009",
+      "area": "seguranca",
+      "priority": "P0",
+      "check": "Aplicar MFA, controle de acesso, protecao de credenciais, logs e segregacao por necessidade."
+    },
+    {
+      "id": "LGPD-WA-010",
+      "area": "decisoes_automatizadas",
+      "priority": "P1",
+      "check": "Documentar pontuacao ou qualificacao automatizada e prever revisao humana quando houver impacto relevante."
+    },
+    {
+      "id": "LGPD-WA-011",
+      "area": "prompt_e_contexto",
+      "priority": "P1",
+      "check": "Remover segredos, credenciais e dados pessoais desnecessarios de prompts e bases de conhecimento."
+    },
+    {
+      "id": "LGPD-WA-012",
+      "area": "evidencia",
+      "priority": "P1",
+      "check": "Guardar versao do fluxo, prompt principal, fontes, politicas de retencao e testes antes de publicar."
+    }
+  ],
+  "official_sources": [
+    "https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2018/Lei/L13709.htm",
+    "https://www.gov.br/governodigital/pt-br/privacidade-e-seguranca/outros-documentos-externos/anpd_guia_agentes_de_tratamento.pdf/view",
+    "https://www.gov.br/anpd/pt-br/centrais-de-conteudo/materiais-educativos-e-publicacoes/processo-guia-orientativo-sobre-seguranca-da-informacao-para-agentes-de-tratamento-de-pequeno-porte.pdf/view",
+    "https://www.gov.br/anpd/pt-br/documentos-e-publicacoes/regulamentacoes-da-anpd/resolucao-cd-anpd-no-2-de-27-de-janeiro-de-2022",
+    "https://www.gov.br/anpd/pt-br/acesso-a-informacao/institucional/atos-normativos/regulamentacoes_anpd/processo_integra_-resolucao_cd_anpd_no_18_2024.pdf/view"
+  ]
+}
