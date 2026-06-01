@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checklist LGPD para IA no WhatsApp | XMACNA</title>
+  <meta name="description" content="Checklist LGPD para agente de IA no WhatsApp. Revise finalidade, base legal, transparencia, minimizacao, seguranca e retencao antes de publicar automacao com IA.">
+  <link rel="canonical" href="https://xmacna.github.io/checklist-lgpd-ia-whatsapp/">
+  <meta property="og:title" content="Checklist LGPD para IA no WhatsApp">
+  <meta property="og:description" content="Checklist operacional da XMACNA para agentes de IA no WhatsApp e Funcionarios Digitais com IA.">
+  <meta property="og:url" content="https://xmacna.github.io/checklist-lgpd-ia-whatsapp/">
+  <meta property="og:type" content="article">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Checklist LGPD para IA no WhatsApp",
+    "description": "Checklist operacional para revisar agente de IA no WhatsApp antes de producao.",
+    "datePublished": "2026-06-01",
+    "dateModified": "2026-06-01",
+    "author": {
+      "@type": "Organization",
+      "name": "XMACNA",
+      "url": "https://xmacna.ai"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "XMACNA",
+      "url": "https://xmacna.ai"
+    },
+    "mainEntityOfPage": "https://xmacna.github.io/checklist-lgpd-ia-whatsapp/"
+  }
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #151515;
+      --muted: #60666d;
+      --line: #d8dee6;
+      --soft: #f6f7f8;
+      --accent: #0b6bcb;
+      --accent-strong: #094d92;
+      --ok: #0b7a4b;
+      --warn: #8a5a00;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: #ffffff;
+      line-height: 1.55;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--accent-strong); text-decoration: underline; }
+    .wrap { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    nav {
+      min-height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    nav strong { letter-spacing: 0; }
+    nav .links {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      font-size: 14px;
+    }
+    .hero {
+      padding: 64px 0 34px;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(180deg, #f9fbfd 0%, #ffffff 78%);
+    }
+    .kicker {
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 0;
+      color: var(--accent-strong);
+      font-weight: 800;
+      margin: 0 0 10px;
+    }
+    h1 {
+      max-width: 860px;
+      font-size: clamp(36px, 6vw, 64px);
+      line-height: 1.02;
+      margin: 0;
+      letter-spacing: 0;
+    }
+    .lead {
+      max-width: 780px;
+      margin: 20px 0 0;
+      color: var(--muted);
+      font-size: 19px;
+    }
+    .notice {
+      margin-top: 22px;
+      max-width: 860px;
+      border: 1px solid #f0d58c;
+      background: #fff9ea;
+      color: #4b3700;
+      padding: 14px 16px;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 24px;
+      padding: 34px 0;
+      align-items: start;
+    }
+    section { padding: 24px 0; }
+    h2 { font-size: 28px; margin: 0 0 16px; letter-spacing: 0; }
+    h3 { font-size: 18px; margin: 0 0 8px; letter-spacing: 0; }
+    .checklist {
+      display: grid;
+      gap: 12px;
+    }
+    .item {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      background: #fff;
+    }
+    .item label {
+      display: grid;
+      grid-template-columns: 24px 1fr;
+      gap: 12px;
+      cursor: pointer;
+      align-items: start;
+    }
+    input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      margin-top: 3px;
+      accent-color: var(--ok);
+    }
+    .item p { margin: 6px 0 0 36px; color: var(--muted); }
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+      background: var(--soft);
+      position: sticky;
+      top: 84px;
+    }
+    .score {
+      font-size: 44px;
+      font-weight: 800;
+      line-height: 1;
+      margin: 6px 0;
+    }
+    .bar {
+      height: 12px;
+      background: #e7ebef;
+      border-radius: 999px;
+      overflow: hidden;
+      margin: 12px 0;
+    }
+    .bar span {
+      display: block;
+      width: 0%;
+      height: 100%;
+      background: var(--ok);
+      transition: width 160ms ease;
+    }
+    .risk {
+      color: var(--warn);
+      font-weight: 700;
+      margin-top: 16px;
+    }
+    ul { padding-left: 20px; }
+    li { margin: 6px 0; }
+    .sources {
+      border-top: 1px solid var(--line);
+      padding: 28px 0 40px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .cta {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 16px;
+      border-radius: 8px;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 700;
+    }
+    .btn:hover { color: #fff; background: var(--accent-strong); text-decoration: none; }
+    .btn.secondary {
+      background: #fff;
+      color: var(--accent-strong);
+      border: 1px solid var(--line);
+    }
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 22px 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    @media (max-width: 840px) {
+      .grid { grid-template-columns: 1fr; }
+      .panel { position: static; }
+      .hero { padding-top: 44px; }
+      nav { align-items: flex-start; padding: 12px 0; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="wrap" aria-label="Navegacao principal">
+      <strong>XMACNA</strong>
+      <div class="links">
+        <a href="https://xmacna.ai">Site</a>
+        <a href="https://xmacna.ai/sdr-com-ia">Agente de IA para WhatsApp</a>
+        <a href="https://xmacna.ai/diagnostico">Diagnostico</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <p class="kicker">LGPD para IA no WhatsApp</p>
+        <h1>Antes de publicar um agente de IA, confira o basico de privacidade.</h1>
+        <p class="lead">Checklist operacional para revisar finalidade, base legal, transparencia, minimizacao, seguranca, retencao e direitos do titular em automacao com IA.</p>
+        <div class="notice">Material educativo. Nao e parecer juridico e nao substitui avaliacao de advogado, DPO ou encarregado.</div>
+      </div>
+    </section>
+
+    <div class="wrap grid">
+      <section>
+        <h2>Checklist P0</h2>
+        <div class="checklist" id="checks">
+          <div class="item">
+            <label><input type="checkbox"><span><strong>Finalidade documentada</strong></span></label>
+            <p>Defina o processo, os dados coletados, a origem e o destino antes de publicar o agente.</p>
+          </div>
+          <div class="item">
+            <label><input type="checkbox"><span><strong>Base legal por etapa</strong></span></label>
+            <p>Registre a base legal para atendimento, qualificacao, CRM/Painel Inteligente, follow-up e retencao.</p>
+          </div>
+          <div class="item">
+            <label><input type="checkbox"><span><strong>Transparencia na conversa</strong></span></label>
+            <p>Informe empresa, finalidade e caminho de contato humano quando fizer sentido.</p>
+          </div>
+          <div class="item">
+            <label><input type="checkbox"><span><strong>Minimizacao de dados</strong></span></label>
+            <p>Colete apenas o necessario. Evite documentos, dados sensiveis e perguntas invasivas sem finalidade clara.</p>
+          </div>
+          <div class="item">
+            <label><input type="checkbox"><span><strong>Dados sensiveis tratados como risco maior</strong></span></label>
+            <p>Crie regra de escalonamento humano, reducao de retencao e revisao juridica quando houver esse risco.</p>
+          </div>
+          <div class="item">
+            <label><input type="checkbox"><span><strong>Papeis e contratos definidos</strong></span></label>
+            <p>Documente controlador, operador, fornecedores e contratos ou DPAs aplicaveis.</p>
+          </div>
+          <div class="item">
+            <label><input type="checkbox"><span><strong>Canal de direitos do titular</strong></span></label>
+            <p>Prepare acesso, correcao, exclusao, informacao de compartilhamento e revisao de decisoes automatizadas quando aplicavel.</p>
+          </div>
+          <div class="item">
+            <label><input type="checkbox"><span><strong>Retencao e descarte</strong></span></label>
+            <p>Defina prazos para leads sem resposta, leads desqualificados, clientes ativos e conversas antigas.</p>
+          </div>
+          <div class="item">
+            <label><input type="checkbox"><span><strong>Seguranca operacional</strong></span></label>
+            <p>Use MFA, minimo privilegio, protecao de credenciais, logs proporcionais e segregacao de acesso.</p>
+          </div>
+          <div class="item">
+            <label><input type="checkbox"><span><strong>Evidencia de versao e testes</strong></span></label>
+            <p>Guarde versao do fluxo, prompt principal, fontes, politica de retencao e testes antes de publicar.</p>
+          </div>
+        </div>
+      </section>
+
+      <aside class="panel" aria-live="polite">
+        <h2>Pronto para publicar?</h2>
+        <div class="score"><span id="done">0</span>/10</div>
+        <div class="bar" aria-hidden="true"><span id="bar"></span></div>
+        <p id="summary">Marque os itens revisados. O minimo seguro e publicar somente depois dos P0 estarem cobertos.</p>
+        <p class="risk">Sinal de risco maior: saude, criancas, biometria, credito, decisao automatizada com impacto relevante ou muitos fornecedores.</p>
+        <div class="cta">
+          <a class="btn" href="https://xmacna.ai/diagnostico">Fazer diagnostico</a>
+          <a class="btn secondary" href="https://xmacna.ai/funcionario-digital">Funcionarios Digitais</a>
+        </div>
+      </aside>
+    </div>
+
+    <section class="wrap">
+      <h2>Como usar em implantacao</h2>
+      <ul>
+        <li>Use o checklist na etapa de desenho do agente, antes de integrar WhatsApp, CRM/Painel Inteligente e automacoes.</li>
+        <li>Se algum item P0 estiver em aberto, trate como pendencia de go-live.</li>
+        <li>Se houver dado sensivel ou decisao automatizada relevante, envolva juridico, DPO ou encarregado.</li>
+        <li>Revise o prompt e a base de conhecimento para remover segredos, dados pessoais desnecessarios e promessas legais inventadas.</li>
+      </ul>
+    </section>
+
+    <section class="wrap sources">
+      <h2>Fontes oficiais</h2>
+      <ul>
+        <li><a href="https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2018/Lei/L13709.htm">Lei 13.709/2018 - LGPD, texto compilado</a></li>
+        <li><a href="https://www.gov.br/governodigital/pt-br/privacidade-e-seguranca/outros-documentos-externos/anpd_guia_agentes_de_tratamento.pdf/view">ANPD - Guia de Agentes de Tratamento e Encarregado</a></li>
+        <li><a href="https://www.gov.br/anpd/pt-br/centrais-de-conteudo/materiais-educativos-e-publicacoes/processo-guia-orientativo-sobre-seguranca-da-informacao-para-agentes-de-tratamento-de-pequeno-porte.pdf/view">ANPD - Guia de Seguranca da Informacao para Agentes de Pequeno Porte</a></li>
+        <li><a href="https://www.gov.br/anpd/pt-br/documentos-e-publicacoes/regulamentacoes-da-anpd/resolucao-cd-anpd-no-2-de-27-de-janeiro-de-2022">ANPD - Resolucao CD/ANPD 2/2022</a></li>
+        <li><a href="https://www.gov.br/anpd/pt-br/acesso-a-informacao/institucional/atos-normativos/regulamentacoes_anpd/processo_integra_-resolucao_cd_anpd_no_18_2024.pdf/view">ANPD - Resolucao CD/ANPD 18/2024</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">XMACNA | Funcionarios Digitais com IA. Checklist educativo, nao promessa de conformidade.</div>
+  </footer>
+
+  <script>
+    const checks = Array.from(document.querySelectorAll('input[type="checkbox"]'));
+    const done = document.getElementById('done');
+    const bar = document.getElementById('bar');
+    const summary = document.getElementById('summary');
+
+    function update() {
+      const count = checks.filter((input) => input.checked).length;
+      done.textContent = count;
+      bar.style.width = `${(count / checks.length) * 100}%`;
+      if (count === checks.length) {
+        summary.textContent = 'Checklist P0 completo. Ainda assim, valide riscos especificos com responsavel juridico ou encarregado.';
+      } else if (count >= 7) {
+        summary.textContent = 'Boa cobertura inicial, mas ainda ha pendencias antes de go-live.';
+      } else {
+        summary.textContent = 'Ainda ha lacunas relevantes para publicar um agente de IA com seguranca operacional.';
+      }
+    }
+
+    checks.forEach((input) => input.addEventListener('change', update));
+    update();
+  </script>
+</body>
+</html>
